@@ -370,7 +370,8 @@
                   </p>
                 </div>
 
-                <div class="columns has-text-centered" id="iframe-container" style="display: flex; justify-content: center;">
+                <div class="columns has-text-centered" id="iframe-container"
+                  style="display: flex; justify-content: center;">
                   <div class="column">
                     <iframe id="interactive-html-1" src="./static/valuemap/close_jar_banana_map1.html" width="100%"
                       height="300" frameborder="0"></iframe>
@@ -457,6 +458,21 @@
                       <option value="stack_cups">stack cups</option>
                     </select>
                   </div>
+
+                  <!-- Additional select element for episode -->
+                  <span>
+                    episode
+                    <div class="select is-small" style="display:inline-block; vertical-align:middle;">
+                      <select id="single-menu-instances" onchange="updateSingleVideo()">
+                        <option value="1" selected="selected">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                      </select>
+                    </div>
+                  </span>
+
                 </div>
               </div>
 

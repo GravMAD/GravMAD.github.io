@@ -22,13 +22,14 @@ function updateOverallVideo() {
 
 function updateSingleVideo() {
     const taskValue = document.getElementById('single-menu-tasks').value.replace(/ /g, "_");
+    const instanceValue = document.getElementById('single-menu-instances').value;
 
-    // Base path for the single task video
-    const basePath = './static/video/base_gravmad/' // Add the path for the new model here
+    // Base path for the single-task video
+    const basePath = './static/video/base_gravmad/';
 
     // Update the video source for the single-task video
     const videoElement = document.getElementById('multi-task-result-video');
     const sourceElement = videoElement.querySelector('source');
-    sourceElement.src = `${basePath}${taskValue}_demo_1.mp4`;
+    sourceElement.src = `${basePath}${taskValue}_demo_${instanceValue}.mp4`;
     videoElement.load(); // Reload video with new source
 }
