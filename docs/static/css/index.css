@@ -209,3 +209,20 @@ iframe {
 .column.is-half {
     width: 50%; /* Bulma默认实现可以确保样式适配 */
 }
+#iframe-container {
+  display: flex;
+  justify-content: center; /* Center iframe(s) */
+  align-items: center; /* Center vertically, if needed */
+  gap: 10px; /* Optional: Adds space between iframes */
+}
+
+#iframe-container .column {
+  flex: 1; /* Distributes the space evenly when multiple columns exist */
+  max-width: 400px; /* Set a reasonable max-width for iframes */
+  text-align: center;
+}
+
+#iframe-container .column iframe {
+  width: 100%;
+  height: 300px;
+}

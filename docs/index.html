@@ -352,17 +352,16 @@
                   Visualize GravMaps for
                   <div class="select is-small is-rounded">
                     <select id="interactive-menu" onchange="updateInteractive()">
-                      <option value="close-jar-banana" selected="selected">"close jar banana"</option>
-                      <option value="close-drawer">"Close the top drawer."</option>
-                      <option value="get-napkin">"Take out a napkin."</option>
-                      <option value="open-bottle">"Turn open vitamin bottle."</option>
-                      <option value="turn-on-light">"Turn on the light."</option>
+                      <option value="close-jar-banana" selected="selected">"Close the jar closer to the banana"</option>
+                      <option value="open-drawer-small">"Open the bottom drawer"</option>
+                      <option value="meat-on-grill">"Put the chicken on the grill"</option>
+                      <option value="push-buttons-light">"Push the button with the same color as the light"</option>
                     </select>
                   </div>
                 </div>
               </div>
 
-              <div class="columns">
+              <div class="columns has-text-centered" style="display: flex; justify-content: center;">
                 <div class="column is-half has-text-centered">
                   <p style="text-align:center;">
                     <video id="interactive-video" width="100%" height="100%" controls autoplay loop muted>
@@ -370,7 +369,25 @@
                     </video>
                   </p>
                 </div>
-                <div class="column has-text-centered">
+
+                <div class="columns has-text-centered" id="iframe-container" style="display: flex; justify-content: center;">
+                  <div class="column">
+                    <iframe id="interactive-html-1" src="./static/valuemap/close_jar_banana_map1.html" width="100%"
+                      height="300" frameborder="0"></iframe>
+                    <p style="text-align:center;">
+                      Interactive GravMap 1
+                    </p>
+                  </div>
+                  <div class="column">
+                    <iframe id="interactive-html-2" src="./static/valuemap/close_jar_banana_map2.html" width="100%"
+                      height="300" frameborder="0"></iframe>
+                    <p style="text-align:center;">
+                      Interactive GravMap 2
+                    </p>
+                  </div>
+                </div>
+
+                <!-- <div class="column has-text-centered">
                   <iframe id="interactive-html-1" src="./static/valuemap/close_jar_banana_map1.html" width="100%" height="300" frameborder="0"></iframe>
                   <p style="text-align:center;">
                     Interactive Value Map 1
@@ -381,7 +398,7 @@
                   <p style="text-align:center;">
                     Interactive Value Map 2
                   </p>
-                </div>
+                </div> -->
               </div>
 
 
@@ -410,8 +427,8 @@
 
             </div>
             </br>
-          </br>
-        </br>
+            </br>
+            </br>
 
 
 

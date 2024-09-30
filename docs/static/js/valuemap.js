@@ -2,32 +2,43 @@ function updateInteractive() {
     const selectMenu = document.getElementById('interactive-menu');
     const selectedValue = selectMenu.value;
 
-    // 预定义视频和iframe的路径
     const videoSources = {
         "close-jar-banana": "static/valuemap/close_jar_banana.mp4",
-        "close-drawer": "static/videos/n10_open_drawer_2.mp4",
-        "get-napkin": "media/videos/get-napkin.mp4",
-        "open-bottle": "media/videos/open-bottle.mp4",
-        "turn-on-light": "media/videos/turn-on-light.mp4"
+        "open-drawer-small": "static/valuemap/open_drawer_small.mp4",
+        "meat-on-grill": "static/valuemap/meat_on_grill.mp4",
+        "push-buttons-light": "static/valuemap/push_buttons_light.mp4"
     };
 
     const iframeSources = {
         "close-jar-banana": ["./static/valuemap/close_jar_banana_map1.html", "./static/valuemap/close_jar_banana_map2.html"],
-        "close-drawer": "media/interactive/close-drawer.html",
-        "get-napkin": "media/interactive/get-napkin.html",
-        "open-bottle": "media/interactive/open-bottle.html",
-        "turn-on-light": "media/interactive/turn-on-light.html"
+        "open-drawer-small": ["./static/valuemap/open_drawer_small_map1.html", "./static/valuemap/open_drawer_small_map2.html"],
+        "meat-on-grill": ["./static/valuemap/meat_on_grill_map1.html", "./static/valuemap/meat_on_grill_map2.html"],
+        "push-buttons-light": ["./static/valuemap/push_buttons_light_map1.html"]
     };
 
-    // 更新视频源
     const videoElement = document.getElementById('interactive-video');
     videoElement.src = videoSources[selectedValue];
     videoElement.load();
 
-    // 更新iframe源
-    const firstIframe = document.getElementById('interactive-html-1');
-    const secondIframe = document.getElementById('interactive-html-2');
+    const iframeContainer = document.getElementById('iframe-container');
+    iframeContainer.innerHTML = ''; // Clear existing columns
 
-    firstIframe.src = iframeSources[selectedValue][0];
-    secondIframe.src = iframeSources[selectedValue][1]; // 假设两个iframe需要显示相同内容，根据需要可分别指定不同路径
+    iframeSources[selectedValue].forEach((src, index) => {
+        const column = document.createElement('div');
+        column.className = 'column has-text-centered';
+
+        const iframe = document.createElement('iframe');
+        iframe.src = src;
+        iframe.width = "100%";
+        iframe.height = "300";
+        iframe.frameBorder = "0";
+
+        const p = document.createElement('p');
+        p.innerText = `Interactive GravMap ${index + 1}`; // Dynamic label based on index
+        p.style.textAlign = "center";
+
+        column.appendChild(iframe);
+        column.appendChild(p);
+        iframeContainer.appendChild(column);
+    });
 }
