@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+    content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GRAVMAD</title>
+  <title>GravMAD</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -22,15 +23,13 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
@@ -40,10 +39,21 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/valuemap.js"></script>
   <script src="./static/js/eval.js"></script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
 </head>
+
 <body>
 
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -82,25 +92,26 @@
   </div>
 </nav> -->
 
-<style>
+  <style>
     .bold {
       font-weight: bold;
     }
+
     .smaller {
       font-size: smaller;
     }
+
     .publication-title {
-      /* Optional styles for the title if needed */
-      font-family: Arial, sans-serif; /* Example font */
+      font-family: 'Google Sans', sans-serif;
     }
-</style>
+  </style>
 
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
             <!-- <h1 class="title is-1 publication-title">
                 <span class="bold">G</span><span class="smaller">RAV</span>MAD:
                 <span class="bold">G</span><span class="smaller">Rounded</span> 
@@ -115,24 +126,24 @@
                 <span class="bold">3</span>D 
                 <span class="bold">M</span><span class="smaller">anipulation</span>
             </h1> -->
-            <h1 class="title is-1 publication-title">
-                <span style="font-weight: bold; ">G</span>RAVMAD:
-                <span style="font-weight: bold; ">G</span>rounded 
-                <span style="font-weight: bold; ">S</span>patial 
-                <span style="font-weight: bold; ">V</span>alue 
-                <span style="font-weight: bold; ">M</span>aps 
-                <span style="font-weight: bold; ">G</span>uided 
-                <span style="font-weight: bold; ">A</span>ction 
-                <span style="font-weight: bold; ">D</span>iffusion
-                <span style="font-weight: bold; ">f</span>or 
-                <span style="font-weight: bold; ">G</span>eneralized
-                <span style="font-weight: bold; ">3</span>D 
-                <span style="font-weight: bold; ">M</Main></span>anipulation
+            <h1 class="title is-1 publication-title" style="font-size: 42px;">
+              <span style="font-weight: bold; ">G</span>ravMAD:
+              <span style="font-weight: bold; ">G</span>rounded
+              <span style="font-weight: bold; ">S</span>patial
+              <span style="font-weight: bold; ">V</span>alue
+              <span style="font-weight: bold; ">M</span>aps
+              <span style="font-weight: bold; ">G</span>uided
+              <span style="font-weight: bold; ">A</span>ction
+              <span style="font-weight: bold; ">D</span>iffusion
+              <span style="font-weight: bold; ">f</span>or
+              <span style="font-weight: bold; ">G</span>eneralized
+              <span style="font-weight: bold; ">3</span>D
+              <span style="font-weight: bold; ">M</Main></span>anipulation
             </h1>
-        <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="">Anonymous authors</a></span>
-            <!-- <span class="author-block">
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="">Anonymous authors</a></span>
+              <!-- <span class="author-block">
               <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
             <span class="author-block">
               <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
@@ -148,17 +159,17 @@
             </span>
             <span class="author-block">
               <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup> -->
-            </span>
-          </div>
+              </span>
+            </div>
 
-          <!-- <div class="is-size-5 publication-authors">
+            <!-- <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Nanjing University,</span>
             <span class="author-block"><sup>2</sup>Google Research</span>
           </div> -->
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link.
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link.
               <span class="link-block">
                 <a href="https://arxiv.org/pdf/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -168,17 +179,16 @@
                   <span>Paper</span>
                 </a>
               </span> -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -187,17 +197,16 @@
                   <span>Video</span>
                 </a>
               </span> -->
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
+                    </span>
+                    <span>Code (Coming soon)</span>
                   </a>
-              </span>
-              <!-- Dataset Link.
+                </span>
+                <!-- Dataset Link.
               <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
@@ -206,35 +215,51 @@
                   </span>
                   <span>Data</span>
                   </a> -->
-            </div>
+              </div>
 
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            We introduce GravMAD, a novel language-conditioned action diffusion framework designed for 3D manipulation tasks, combining the imitation learning abilities of learning-based approaches with the generalization strengths of foundation models. To enhance model training, we propose Sub-goal Keyframe Discovery, a data distillation method that identifies critical sub-goals within trajectories, generating GravMaps to guide the trajectory diffusion process. These maps serve as a crucial interface between language understanding and action execution, facilitating the denoising of random noise into end-effector poses for robotic arms. We conduct a series of experiments on RLBench, a representative benchmark for instruction-following 3D  manipulation. The experimental results show that GravMAD achieves an absolute performance gain of 7.91% over the current state-of-the-art on seen tasks and an absolute gain of 33.21% on novel tasks with altered instructions or scene configurations, demonstrating strong multi-task learning and generalization capabilities in 3D manipulation tasks. 
-          </p>
-          </p>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Robots' ability to follow language instructions and execute diverse 3D tasks is vital in robot learning.
+              Traditional imitation learning-based methods perform well on seen tasks but struggle with novel, unseen
+              ones due to variability. Recent approaches leverage large foundation models to assist in understanding
+              novel tasks, thereby mitigating this issue. However, these methods lack a task-specific learning process,
+              which is essential for an accurate understanding of 3D environments, often leading to execution failures.
+              In this paper, we introduce <span style="font-weight: bold; ">GravMAD</span>, a sub-goal-driven,
+              language-conditioned action diffusion framework that combines the strengths of imitation learning and
+              foundation models. Our approach breaks tasks into sub-goals based on language instructions, allowing
+              auxiliary guidance during both training and inference. During training, we introduce <span
+                style="font-weight: bold; ">Sub-goal Keypose Discovery</span> to identify key sub-goals from
+              demonstrations. Inference differs from training, as there are no demonstrations available, so we use
+              pre-trained foundation models to bridge the gap and identify sub-goals for the current task. In both
+              phases, <span style="font-weight: bold; ">GravMaps</span> are generated from sub-goals, providing flexible
+              3D spatial guidance compared to fixed 3D positions. Empirical evaluations on RLBench show that GravMAD
+              significantly outperforms state-of-the-art methods, with a 28.63% improvement on novel tasks and a 13.36%
+              gain on tasks encountered during training. These results demonstrate GravMAD's strong multi-task learning
+              and generalization in 3D manipulation.
+            </p>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <!--/ Abstract. -->
+      <!--/ Abstract. -->
 
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
+      <!-- Paper video. -->
+      <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -243,65 +268,210 @@
         </div>
       </div>
     </div> -->
-    <!--/ Paper video. -->
-  </div>
-</section>
+      <!--/ Paper video. -->
+    </div>
+  </section>
 
 
 
 
-<style>
+  <style>
     .video-container {
       width: 24%;
       margin: 0 auto;
     }
-  
+
     .video-single-container {
       max-width: 28%;
       margin: 0 auto;
     }
-  
+
     video {
       width: 100%;
       height: auto;
     }
   </style>
-  
-  <div class="column has-text-centered video-single-container">
-      <h2 class="title is-3">One Multi-Task Transformer</h2>
-      <span>
-        Train on 12 base tasks:
-        <div class="select is-small" style="display:inline-block; vertical-align:middle;">
-          <select id="single-menu-tasks" onchange="updateSingleVideo()">
-            <option value="close_jar" selected="selected">close jar</option>
-            <option value="open_drawer">open drawer</option>
-            <option value="meat_off_grill">meat off grill</option>
-            <option value="slide_block_to_color_target  ">slide block</option>
-            <option value="put_item_in_drawer">put in drawer</option>
-            <option value="push_buttons">push buttons</option>
-            <option value="stack_blocks">stack blocks</option>
-            <option value="place_cups">place cups</option>
-            <option value="place_wine_at_rack_location">place wine</option>
-            <option value="light_bulb_in">screw bulb</option>
-            <option value="insert_onto_square_peg">insert peg</option>
-            <option value="stack_cups">stack cups</option>
-          </select>
+
+  <section class="section">
+    <div class="container is-max-widescreen">
+
+      <div class="rows">
+
+        <div class="rows is-centered ">
+          <div class="row is-full-width">
+
+
+
+
+            <h2 class="title is-3"><span class="dperact">GravMAD Overview</span></h2>
+
+            <div class="content has-text-justified">
+            </div>
+
+            <div style="text-align: center;">
+              <img src="static/images/method1.png" class="interpolation-image" style="width: 85%; height: auto;" />
+            </div>
+            </br>
+            </br>
+
+            <p class="content has-text-justified">
+              <span style="font-weight: bold; ">(a) GravMap Synthesis:</span> During training, we use Sub-goal Keypose
+              Discovery to obtain sub-goals $g^\text{pos}$ and $g^\text{open}$. During inference, the Detector, Planner,
+              and Composer pipeline interprets visual observations and language instructions to derive $g^\text{pos}$
+              and $g^\text{open}$, which are processed into a GravMap and encoded as a GravMap token.
+            </p>
+
+            </br>
+
+            <div style="text-align: center;">
+              <img src="static/images/method2.png" class="interpolation-image" style="width: 85%; height: auto;" />
+            </div>
+            </br>
+            </br>
+            <p class="content has-text-justified">
+              <span style="font-weight: bold; ">(b) GravMaps Guided Action Diffusion:</span> The policy network
+              perceives the scene and denoises noisy actions guided by the GravMap token. After $K$ denoising steps, the
+              clean actions are executed by the robot.
+            </p>
+
+            </br>
+            </br>
+
+
+
+
+
+
+
+
+            <h2 class="title is-3">Interactive Visualization</h2>
+            <div class="row">
+
+              <div class="columns">
+                <div class="column has-text-centered">
+                  Visualize GravMaps for
+                  <div class="select is-small is-rounded">
+                    <select id="interactive-menu" onchange="updateInteractive()">
+                      <option value="close-jar-banana" selected="selected">"close jar banana"</option>
+                      <option value="close-drawer">"Close the top drawer."</option>
+                      <option value="get-napkin">"Take out a napkin."</option>
+                      <option value="open-bottle">"Turn open vitamin bottle."</option>
+                      <option value="turn-on-light">"Turn on the light."</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="columns">
+                <div class="column is-half has-text-centered">
+                  <p style="text-align:center;">
+                    <video id="interactive-video" width="100%" height="100%" controls autoplay loop muted>
+                      <source src="static/valuemap/close_jar_banana.mp4" type="video/mp4">
+                    </video>
+                  </p>
+                </div>
+                <div class="column has-text-centered">
+                  <iframe id="interactive-html-1" src="./static/valuemap/close_jar_banana_map1.html" width="100%" height="300" frameborder="0"></iframe>
+                  <p style="text-align:center;">
+                    Interactive Value Map 1
+                  </p>
+                </div>
+                <div class="column has-text-centered" id="second-iframe-container">
+                  <iframe id="interactive-html-2" src="./static/valuemap/close_jar_banana_map2.html" width="100%" height="300" frameborder="0"></iframe>
+                  <p style="text-align:center;">
+                    Interactive Value Map 2
+                  </p>
+                </div>
+              </div>
+
+
+              <!-- <div class="columns" style="min-height: 500px;">
+                <div class="column is-one-fifth has-text-centered"
+                  style="display: flex; justify-content: center; align-items: center;">
+                  <video id="interactive-video" autoplay loop muted style="max-width: 50%; height: auto;">
+                    <source src="static/valuemap/close_jar_banana.mp4" type="video/mp4">
+                  </video>
+                </div>
+
+                <div class="columns" style="min-height: 500px;">
+                  <div class="column is-two-fifth has-text-centered">
+                    <iframe id="interactive-html-1" src="./static/valuemap/close_jar_banana_map1.html" width="100%"
+                      height="300" frameborder="0"></iframe>
+                    <p>GravMap 1</p>
+                  </div>
+                  <div class="column is-two-fifth has-text-centered">
+                    <iframe id="interactive-html-2" src="./static/valuemap/close_jar_banana_map2.html" width="100%"
+                      height="300" frameborder="0"></iframe>
+                    <p>GravMap 2</p>
+                  </div>
+                </div>
+              </div>
+              </br> -->
+
+            </div>
+            </br>
+          </br>
+        </br>
+
+
+
+
+
+
+
+            <h2 class="title is-3">Performance on 12 Base Task</h2>
+            <div class="row">
+              <div class="columns">
+                <div class="column has-text-centered">
+                  Evaluated on 12 base tasks:
+                  <div class="select is-small is-rounded">
+                    <select id="single-menu-tasks" onchange="updateSingleVideo()">
+                      <option value="close_jar" selected="selected">close jar</option>
+                      <option value="open_drawer">open drawer</option>
+                      <option value="meat_off_grill">meat off grill</option>
+                      <option value="slide_block_to_color_target  ">slide block</option>
+                      <option value="put_item_in_drawer">put in drawer</option>
+                      <option value="push_buttons">push buttons</option>
+                      <option value="stack_blocks">stack blocks</option>
+                      <option value="place_cups">place cups</option>
+                      <option value="place_wine_at_rack_location">place wine</option>
+                      <option value="light_bulb_in">screw bulb</option>
+                      <option value="insert_onto_square_peg">insert peg</option>
+                      <option value="stack_cups">stack cups</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: flex; justify-content: center; align-items: center;">
+                <video id="multi-task-result-video" muted autoplay loop style="max-width: 50%; height: auto;">
+                  <source id="video-source" src="static/video/base_gravmad/close_jar_demo_1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+
+            </br>
+
+
+          </div>
         </div>
-      </span>
-      <br>
-      <br>
-    
-      <video id="multi-task-result-video" muted autoplay loop>
-        <source id="video-source" src="static/video/base_gravmad/close_jar_demo_1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-  </div>
-  
-  <div class="has-text-centered">
-    <span>
-        Evaluated on 8 unseen tasks:
-        <div class="select is-small" style="display:inline-block; vertical-align:middle">     
-            <select id="overall-menu-tasks" onchange="updateOverallVideo()">
+  </section>
+
+
+
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <div class="row">
+
+
+        <h2 class="title is-3">Performance on 8 Novel Task</h2>
+        <div class="has-text-centered">
+          <span>
+            Evaluated on 8 unseen tasks:
+            <div class="select is-small" style="display:inline-block; vertical-align:middle">
+              <select id="overall-menu-tasks" onchange="updateOverallVideo()">
                 <option value="close_drawer">close drawer</option>
                 <option value="close_jar_banana">close jar banana</option>
                 <option value="close_jar_distractor">close jar distractor</option>
@@ -310,111 +480,73 @@
                 <option value="open_drawer_small">open drawer small</option>
                 <option value="stack_cups_blocks">stack cups blocks</option>
                 <option value="push_buttons_light">push buttons light</option>
-            </select>
-        </div>
-        episode
-        <div class="select is-small" style="display:inline-block; vertical-align:middle;">
-            <select id="overall-menu-instances" onchange="updateOverallVideo()">
+              </select>
+            </div>
+            episode
+            <div class="select is-small" style="display:inline-block; vertical-align:middle;">
+              <select id="overall-menu-instances" onchange="updateOverallVideo()">
                 <option value="1" selected="selected">01</option>
                 <option value="2">02</option>
                 <option value="3">03</option>
                 <option value="4">04</option>
                 <option value="5">05</option>
-            </select>
+              </select>
+            </div>
+          </span>
         </div>
-    </span>
-  </div>
-  <br><br>
-  
-  <div class="columns is-multiline">
-      <div class="column is-one-quarter has-text-centered video-container">
-          <span>VoxPoser</span>
-          <br><br>
-          <video id="voxposer-video" muted autoplay loop>
+        <br><br>
+
+        <div class="columns is-multiline">
+          <div class="column is-one-quarter has-text-centered video-container">
+            <span>VoxPoser</span>
+            <br><br>
+            <video id="voxposer-video" muted autoplay loop>
               <source src="static/video/voxposer/close_drawer_demo_1.mp4" type="video/mp4">
               Your browser does not support the video tag.
-          </video>
-      </div>
-  
-      <div class="column is-one-quarter has-text-centered video-container">
-          <span>act3D</span>
-          <br><br>
-          <video id="act3d-video" muted autoplay loop>
+            </video>
+          </div>
+
+          <div class="column is-one-quarter has-text-centered video-container">
+            <span>act3D</span>
+            <br><br>
+            <video id="act3d-video" muted autoplay loop>
               <source src="static/video/act3d/close_drawer_demo_1.mp4" type="video/mp4">
               Your browser does not support the video tag.
-          </video>
-      </div>
-  
-      <div class="column is-one-quarter has-text-centered video-container">
-          <span>3d diffuser actor</span>
-          <br><br>
-          <video id="3dda-video" muted autoplay loop>
+            </video>
+          </div>
+
+          <div class="column is-one-quarter has-text-centered video-container">
+            <span>3d diffuser actor</span>
+            <br><br>
+            <video id="3dda-video" muted autoplay loop>
               <source src="static/video/3dda/close_drawer_demo_1.mp4" type="video/mp4">
               Your browser does not support the video tag.
-          </video>
-      </div>
-  
-      <div class="column is-one-quarter has-text-centered video-container">
-          <span>GravMAD</span>
-          <br><br>
-          <video id="gravmad-video" muted autoplay loop>
+            </video>
+          </div>
+
+          <div class="column is-one-quarter has-text-centered video-container">
+            <span>GravMAD</span>
+            <br><br>
+            <video id="gravmad-video" muted autoplay loop>
               <source src="static/video/gravmad/close_drawer_demo_1.mp4" type="video/mp4">
               Your browser does not support the video tag.
-          </video>
+            </video>
+          </div>
+        </div>
       </div>
-  </div>
+    </div>
+  </section>
 
-  
+
 
 
   <section class="section">
-    <div class="row">
-        <h2 class="title is-3 has-text-centered">Interactive Visualization</h2> <!-- 添加 has-text-centered 类 -->
-
-        <div class="columns">
-            <div class="column has-text-centered">
-                Visualize value maps for 
-                <div class="select is-small is-rounded">
-                    <select id="interactive-menu" onchange="updateInteractive()">
-                        <option value="close-jar-banana" selected="selected">"close jar banana"</option>
-                        <option value="close-drawer">"Close the top drawer."</option>
-                        <option value="get-napkin">"Take out a napkin."</option>
-                        <option value="open-bottle">"Turn open vitamin bottle."</option>
-                        <option value="turn-on-light">"Turn on the light."</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <div class="columns" style="min-height: 500px;">
-            <div class="column is-one-fifth has-text-centered" style="display: flex; align-items: center;">
-                <p style="width: 100%">
-                    <video id="interactive-video" width="100%" height="auto" controls autoplay loop muted>
-                        <source src="static/valuemap/close_jar_banana.mp4" type="video/mp4">
-                    </video>
-                </p>
-            </div>
-            <div class="column is-two-fifth has-text-centered">
-                <iframe id="interactive-html-1" src="./static/valuemap/close_jar_banana_map1.html" width="100%" height="400" frameborder="0"></iframe>
-                <p>Interactive Value Map 1</p>
-            </div>
-            <div class="column is-two-fifth has-text-centered">
-                <iframe id="interactive-html-2" src="./static/valuemap/close_jar_banana_map2.html" width="100%" height="400" frameborder="0"></iframe>
-                <p>Interactive Value Map 2</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-<section class="section">
     <div class="container is-max-widescreen">
-    <div class="row">
-      <h2 class="title is-3">
-        Prompts
-      </h2>
-      <p class="content has-text-justified">
+      <div class="row">
+        <h2 class="title is-3">
+          Prompts
+        </h2>
+        <p class="content has-text-justified">
           Prompts in Simulation Environments (planners are not used in simulation):
           <br>
           <a href="./static/prompts/planner.txt">Composer</a> |
@@ -424,8 +556,8 @@
           <a href="prompts/sim_get_rotation_map_prompt.txt">Get Rotation Maps</a> |
           <a href="prompts/sim_get_velocity_map_prompt.txt">Get Velocity Maps</a> |
           <a href="prompts/sim_get_gripper_map_prompt.txt">Get Gripper Maps</a>
-      </p>
-            <!-- <p class="content has-text-justified">
+        </p>
+        <!-- <p class="content has-text-justified">
           Prompts in Real-World Environments:
           <br>
           <a href="./static/prompts/planner.txt">Planner</a> |
@@ -437,12 +569,12 @@
           <a href="prompts/real_get_velocity_map_prompt.txt">Get Velocity Maps</a> |
           <a href="prompts/real_get_gripper_map_prompt.txt">Get Gripper Maps</a>
       </p> -->
+      </div>
     </div>
-    </div>
-</section>
+  </section>
 
 
-<!-- <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{park2021nerfies,
@@ -455,17 +587,17 @@
 </section> -->
 
 
-<footer class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-8">
-          <div class="content has-text-centered"> <!-- 添加 has-text-centered -->
+          <div class="content has-text-centered">
+            <!-- 添加 has-text-centered -->
             <p>
               Website template borrowed from <a rel="license"
-              href="https://github.com/nerfies/nerfies.github.io">NeRFies </a>
-              and 
-              <a rel="license"
-              href="https://voxposer.github.io/">VoxPoser </a>
+                href="https://github.com/nerfies/nerfies.github.io">NeRFies </a>
+              and
+              <a rel="license" href="https://voxposer.github.io/">VoxPoser </a>
             </p>
           </div>
         </div>
@@ -474,4 +606,5 @@
   </footer>
 
 </body>
+
 </html>

@@ -12,7 +12,7 @@ function updateInteractive() {
     };
 
     const iframeSources = {
-        "close-jar-banana": "./static/valuemap/close_jar_banana_map1.html",
+        "close-jar-banana": ["./static/valuemap/close_jar_banana_map1.html", "./static/valuemap/close_jar_banana_map2.html"],
         "close-drawer": "media/interactive/close-drawer.html",
         "get-napkin": "media/interactive/get-napkin.html",
         "open-bottle": "media/interactive/open-bottle.html",
@@ -28,6 +28,6 @@ function updateInteractive() {
     const firstIframe = document.getElementById('interactive-html-1');
     const secondIframe = document.getElementById('interactive-html-2');
 
-    firstIframe.src = iframeSources[selectedValue];
-    secondIframe.src = iframeSources[selectedValue]; // 假设两个iframe需要显示相同内容，根据需要可分别指定不同路径
+    firstIframe.src = iframeSources[selectedValue][0];
+    secondIframe.src = iframeSources[selectedValue][1]; // 假设两个iframe需要显示相同内容，根据需要可分别指定不同路径
 }
