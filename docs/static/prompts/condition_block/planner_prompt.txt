@@ -1,0 +1,13 @@
+objects = ['green_target', 'red_cube1', 'red_cube2', 'red_cube3', 'blue_cube']
+# Query: if blue block exists, stack 1 red blocks, then add this blue block.
+composer("grasp red_cube3")
+composer("move to 3cm on top of green_target then open gripper")
+composer("grasp blue_cube")
+composer("move to 6cm on top of green_target then open gripper")
+# done
+
+objects = ['green_target', 'red_cube1', 'red_cube2', 'red_cube3']
+# Query: if blue block exists, stack 1 red blocks, then add this blue block.
+composer("grasp red_cube3")
+composer("move to 3cm on top of green_target then open gripper")
+# done

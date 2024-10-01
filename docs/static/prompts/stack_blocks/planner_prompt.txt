@@ -1,0 +1,9 @@
+objects = ['green_target', 'red_cube1', 'red_cube2', 'red_cube3', 'red_cube4']
+# Query: set 3 red cubes on top of each other.
+composer("grasp red_cube3")
+composer("move to 3cm on top of green_target then open gripper")
+composer("grasp red_cube2")
+composer("move to 6cm on top of green_target then open gripper")
+composer("grasp red_cube1")
+composer("move to 9cm on top of green_target then open gripper")
+# done

@@ -1,0 +1,15 @@
+Instruction: pick up the chicken and place it next to the grill.
+(example_som)
+<Start Analyzing>
+This is a robotic arm wrist view. The desktop has a steak, a chicken and some numbers associated with them.
+- Steak label as 14.
+- Chicken label as 13.
+- Chicken place target, i.e. next to the grill, as 5.
+In this task, I need to pick up the meat and place it next to the grill.
+The chicken is labeled as label 13, and meat place target space as label 5.
+All other objects, including the steak 14, parts of the robotic arm 6, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "chicken": 13,
+    "meat_place_target": 5
+}

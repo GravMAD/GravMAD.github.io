@@ -1,0 +1,11 @@
+objects = ['green_target', 'block']
+# Query: cover the green target with the block by pushing the block in its direction.
+composer("move to the side of the block with its back to the green_target.")
+composer("push to green_target")
+# done
+
+objects = ['green_target', 'block']
+# Query: slide the block onto the green square.
+composer("move to the side of the block with its back to the green_target.")
+composer("push to green_target")
+# done

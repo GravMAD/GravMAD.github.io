@@ -1,0 +1,7 @@
+objects = ['green_cup', 'red_cup', 'purple_cup', 'green_block_0', 'green_block_1', 'green_block_2', 'purple_block_0',]
+# Query: identify the color with the most blocks, choose that color for the base cup, and stack the other cups on top of it.
+composer("grasp red_cup")
+composer("move to 5cm on top of green_cup then open gripper") # the color with the most blocks is green, so green cup is the base cup
+composer("grasp purple_cup")
+composer("move to 15cm on top of green_cup then open gripper")
+# done

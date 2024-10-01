@@ -1,0 +1,16 @@
+Instruction: close the jar closer to the banana.
+(example_som)
+<Start Analyzing>
+The desktop has various colored jars, a jar lid, a banana and some numbers associated with them.
+- A yellow cylindrical jar labeled as 8.
+- A purple cylindrical jar labeled as 9.
+- A banana labeled as 6.
+- A small grey lid labeled as 10.
+In this task, I need to close the jar closer to the banana.
+The yellow jar is closer to banana which is labeled as label 8, and lid as label 10.
+All other objects, including the purple jar, parts of the robotic arm, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "jar_closer_to_banana": 8,
+    "lid": 10
+}

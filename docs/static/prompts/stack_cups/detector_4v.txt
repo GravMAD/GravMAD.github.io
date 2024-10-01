@@ -1,0 +1,16 @@
+Instruction: stack the other cups on top of the black cup. 
+(example_som)
+<Start Analyzing>
+The desktop has various colored cups and some numbers associated with them.
+- black cup: Numbered 6.
+- orange cup: Numbered 14.
+- blue cup: Numbered 4.
+In this task, I need to stack the other cups on top of the black cup. 
+The black cup is labeled as label 6, blue cup as label 4, and orange cup as label 14.
+All other objects, including parts of the robotic arm, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "black_cup": 6,
+    "orange_cup": 14,
+    "blue_cup": 4,
+}

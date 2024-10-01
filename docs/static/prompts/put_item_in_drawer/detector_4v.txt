@@ -1,0 +1,18 @@
+Instruction: put the block away in the bottom drawer.
+(example_som)
+<Start Analyzing>
+The desktop has a drawer, a block and some numbers associated with it.
+- Drawer bottom handle label as 12.
+- Drawer middle handle label as 11.
+- Drawer top handle label as 13.
+- Block label as 14.
+In this task, I need to put the block away in the bottom drawer.
+The drawer bottom handle is labeled as label 12, middle handle is labeled as label 11, top handle is labeled as label 13 and block as label 14.
+All other objects, including parts of the robotic arm, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "bottom_handle": 12,
+    "middle_handle": 11,
+    "top_handle": 13,
+    "block": 14
+}

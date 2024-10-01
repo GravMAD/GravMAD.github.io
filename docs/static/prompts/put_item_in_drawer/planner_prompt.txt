@@ -1,0 +1,15 @@
+objects = ['block', 'bottom_handle']
+# Query: put the block away in the bottom drawer.
+composer("grasp bottom_handle")
+composer("move away from the bottom_handle by 40cm and keep gripper close")
+composer("grasp block")
+composer("move away from the bottom_handle by 5cm then open gripper")
+# done
+
+objects = ['block', 'bottom_handle']
+# Query: open the bottom_handle and place the block inside of it.
+composer("grasp bottom_handle")
+composer("move away from the bottom_handle by 40cm and keep gripper close")
+composer("grasp block")
+composer("move away from the bottom_handle by 5cm then open gripper")
+# done

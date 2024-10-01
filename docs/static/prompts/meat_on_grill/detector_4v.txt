@@ -1,0 +1,15 @@
+Instruction: pick up the steak and place it on the grill.
+(example_som)
+<Start Analyzing>
+The desktop has a steak, a chicken and some numbers associated with them.
+- Steak label as 16.
+- Chicken label as 17.
+- Grill label as 8.
+In this task, I need to pick up the steak and place it on the grill.
+The steak is labeled as label 16, and grill as label 8.
+All other objects, including the chicken, parts of the robotic arm, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "steak": 16,
+    "grill": 8
+}

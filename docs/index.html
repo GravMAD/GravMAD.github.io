@@ -447,7 +447,7 @@
                       <option value="close_jar" selected="selected">close jar</option>
                       <option value="open_drawer">open drawer</option>
                       <option value="meat_off_grill">meat off grill</option>
-                      <option value="slide_block_to_color_target  ">slide block</option>
+                      <option value="slide_block_to_color_target">slide block to color target</option>
                       <option value="put_item_in_drawer">put in drawer</option>
                       <option value="push_buttons">push buttons</option>
                       <option value="stack_blocks">stack blocks</option>
@@ -530,7 +530,7 @@
         <br><br>
 
         <div class="columns is-multiline">
-          <div class="column is-one-quarter has-text-centered video-container">
+          <div class="column is-half has-text-centered video-container">
             <span>VoxPoser</span>
             <br><br>
             <video id="voxposer-video" muted autoplay loop>
@@ -539,17 +539,18 @@
             </video>
           </div>
 
-          <div class="column is-one-quarter has-text-centered video-container">
-            <span>act3D</span>
+          <div class="column is-half has-text-centered video-container">
+            <span>Act3D</span>
             <br><br>
             <video id="act3d-video" muted autoplay loop>
               <source src="static/video/act3d/close_drawer_demo_1.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
-
-          <div class="column is-one-quarter has-text-centered video-container">
-            <span>3d diffuser actor</span>
+        </div>
+          <div class="columns is-multiline">
+          <div class="column is-half has-text-centered video-container">
+            <span>3D Diffuser Actor</span>
             <br><br>
             <video id="3dda-video" muted autoplay loop>
               <source src="static/video/3dda/close_drawer_demo_1.mp4" type="video/mp4">
@@ -557,7 +558,7 @@
             </video>
           </div>
 
-          <div class="column is-one-quarter has-text-centered video-container">
+          <div class="column is-quarter has-text-centered video-container">
             <span>GravMAD</span>
             <br><br>
             <video id="gravmad-video" muted autoplay loop>
@@ -580,15 +581,14 @@
           Prompts
         </h2>
         <p class="content has-text-justified">
-          Prompts in Simulation Environments (planners are not used in simulation):
+          Prompts in Simulation Environments:
           <br>
-          <a href="./static/prompts/planner.txt">Composer</a> |
-          <a href="prompts/sim_parse_query_obj_prompt.txt">Parse Query Object</a> |
-          <a href="prompts/sim_get_affordance_map_prompt.txt">Get Affordance Maps</a> |
-          <a href="prompts/sim_get_avoidance_map_prompt.txt">Get Avoidance Maps</a> |
-          <a href="prompts/sim_get_rotation_map_prompt.txt">Get Rotation Maps</a> |
-          <a href="prompts/sim_get_velocity_map_prompt.txt">Get Velocity Maps</a> |
-          <a href="prompts/sim_get_gripper_map_prompt.txt">Get Gripper Maps</a>
+          <a href="./static/prompts/planner_prompt.txt">Planner</a> |
+          <a href="./static/prompts/composer_prompt.txt">Composer</a> |
+          <a href="./static/prompts/detector_4v.txt">Detetor</a> |
+          <a href="./static/prompts/get_cost_map_prompt.txt">Get Cost Maps</a> |
+          <a href="./static/prompts/get_gripper_map_prompt.txt">Get Gripper Maps</a> |
+          <a href="https://github.com/GravMAD/GravMAD.github.io/tree/main/docs/static/prompts">More Detailed Prompts</a>
         </p>
         <!-- <p class="content has-text-justified">
           Prompts in Real-World Environments:

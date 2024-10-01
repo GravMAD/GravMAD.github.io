@@ -1,0 +1,1 @@
+Place on a metal grid-like structure next to the grill. Please use 'meat_place_target' as its key and number as the value. You only need to pick one label for each object, not multiple labels.

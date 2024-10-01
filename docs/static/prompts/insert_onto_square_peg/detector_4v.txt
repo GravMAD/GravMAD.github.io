@@ -1,0 +1,16 @@
+Instruction: slide the ring onto the blue colored spoke. 
+(example_som)
+<Start Analyzing>
+The desktop has various colored spokes, a ring and some numbers associated with them.
+- A pink spoke labeled as 12.
+- A blue spoke labeled as 11.
+- A cyan spoke labeled as 9.
+- A blue cube ring on the tray labeled as 10.
+In this task, I need to slide the ring onto the red colored spoke.
+The red spoke is labeled as label 11, and blue cube ring as label 10.
+All other objects, including the pink spoke, cyan spoke, parts of the robotic arm 3 4, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "blue_spoke": 11,
+    "ring": 10
+}

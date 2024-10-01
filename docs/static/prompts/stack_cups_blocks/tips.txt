@@ -1,0 +1,1 @@
+You only need to pick one label for each object, not multiple labels.

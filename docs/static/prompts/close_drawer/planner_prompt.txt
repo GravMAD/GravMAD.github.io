@@ -1,0 +1,5 @@
+objects = ['bottom_handle', 'middle_handle', 'top_handle']
+# Query: slide the bottom drawer shut.
+composer("grasp bottom_handle")
+composer("move close from the bottom_handle by 30cm and keep gripper close")
+# done

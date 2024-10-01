@@ -1,0 +1,1 @@
+The color of the button refers to the color of the wrapper.

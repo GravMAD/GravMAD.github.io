@@ -1,0 +1,14 @@
+# Query: grasp wine_bottle.
+movable = parse_query_obj('gripper')
+cost_map = get_cost_map('a point at the center of wine_bottle')
+gripper_map = get_gripper_map('open everywhere except 3cm around the wine_bottle')
+
+# Query: move to shelf_left then open gripper.
+movable = parse_query_obj('gripper')
+cost_map = get_cost_map('a point at the center of shelf_left')
+gripper_map = get_gripper_map('close everywhere except 3cm around the shelf_left')
+
+# Query: push the bottle to the left part of the shelf.
+movable = parse_query_obj('gripper')
+cost_map = get_cost_map('a point at the center of shelf_left')
+gripper_map = get_gripper_map('close everywhere except 3cm around the shelf_left')

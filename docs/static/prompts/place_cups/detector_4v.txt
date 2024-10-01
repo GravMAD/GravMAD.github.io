@@ -1,0 +1,17 @@
+Instruction: pick up 3 mugs and slide their handles onto the cup holder spokes.
+(example_som)
+<Start Analyzing>
+The desktop has four cups, a cup holder and some numbers associated with them.
+- Cup holder spoke: Numbered 3, 13.
+- Cups: Numbered 9, 10 and 12.
+In this task, I need to pick up 3 mugs and slide their handles onto the cup holder spokes.
+The cups are labeled as label 9, 10 and 12, and the cup holder spoke as label 3, 13.
+All other objects, including the cup holder base 8, parts of the robotic arm 4 5, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "cup0": 9,
+    "cup1": 10,
+    "cup2": 12,
+    "cup_holder_spoke0": 3,
+    "cup_holder_spoke1": 13,
+}

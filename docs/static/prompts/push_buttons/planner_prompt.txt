@@ -1,0 +1,6 @@
+objects = ['red_button', 'purple_button', 'green_button']
+# Query: push the red button, then push the purple button, then push the green button.
+composer("push red_button")
+composer("push purple_button")
+composer("push green_button")
+# done

@@ -1,0 +1,16 @@
+Instruction: push the button with the same color as the light.
+(example_som)
+<Start Analyzing>
+The desktop has three buttons, a yellow light and some numbers associated with it.
+- Blue button label as 6.
+- Gray button label as 7.
+- White button label as 8.
+- White light label as 9.
+In this task, I need to push the button with the same color as the light.
+The white button is labeled as label 8, and the white light labeled as 9.
+All other objects, including blue button, blue button, parts of the robotic arm, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "white_button": 8,
+    "white_light": 9
+}

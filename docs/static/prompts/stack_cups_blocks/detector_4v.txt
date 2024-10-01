@@ -1,0 +1,22 @@
+Instruction: identify the color with the most blocks, choose that color for the base cup, and stack the other cups on top of it. 
+(example_som)
+<Start Analyzing>
+The desktop has various colored cups,  various colored blocks and some numbers associated with them.
+- green cup: Numbered 15.
+- red cup: Numbered 16.
+- purple cup: Numbered 17.
+- green block: Numbered 10, 11, 14.
+- purple block: Numbered 13.
+In this task, I need to identify the color with the most blocks, choose that color for the base cup, and stack the other cups on top of it. 
+The green cup is labeled as label 15, red cup as label 16, purple cup as label 17, green block as label 10, 11, 14, and purple block 13.
+All other objects, including parts of the robotic arm, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "green_cup": 6,
+    "red_cup": 14,
+    "purple_cup": 4,
+    "green_block_0": 10,
+    "green_block_1": 11,
+    "green_block_2": 14,
+    "purple_block_0": 13,
+}

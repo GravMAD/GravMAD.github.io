@@ -1,0 +1,12 @@
+objects = ['chicken', 'meat_place_target']
+# Query: pick up the chicken and place it next to the grill.
+composer("grasp chicken")
+# "meat_place_target" means next to the grill
+composer("move to meat_place_target then open gripper")
+# done
+
+objects = ['chicken', 'meat_place_target']
+# Query: take the chicken off the grill.
+composer("grasp chicken")
+composer("move to meat_place_target then open gripper") # Use meat_place_target directly to represent meat off the grill
+# done

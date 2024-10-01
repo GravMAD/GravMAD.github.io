@@ -1,0 +1,1 @@
+Don't put the bottle on the desktop. Please be careful to distinguish between a yellow shelf and a yellow desktop. Always choose the label in the middle of the shelf as the object shelf. The rack and shelf in the directive are the same thing, please use shelf in the returned object dict.Near the top of the picture is the left.

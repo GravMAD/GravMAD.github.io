@@ -1,0 +1,5 @@
+objects = ['middle_handle']
+# Query: open the bottom drawer.
+composer("grasp bottom_handle") # position of bottom_handle can be inferred from middle_handle
+composer("move away from the bottom_handle by 15cm and keep gripper close")
+# done

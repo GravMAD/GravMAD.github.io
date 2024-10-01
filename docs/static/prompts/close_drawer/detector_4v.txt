@@ -1,0 +1,16 @@
+Instruction: slide the bottom drawer shut.
+(example_som)
+<Start Analyzing>
+The desktop has a drawer and some numbers associated with it.
+- Drawer bottom handle label as 19.
+- Drawer middle handle label as 20.
+- Drawer top handle label as 17.
+In this task, I need to slide the bottom drawer shut.
+The bottom handle is labeled as label 19. The middle handle is labeled as label 20. The top handle is labeled as label 17.
+All other objects, including parts of the robotic arm, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "bottom_handle": 19,
+    "middle_handle": 20,
+    "top_handle": 17
+}

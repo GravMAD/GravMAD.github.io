@@ -1,0 +1,1 @@
+This type of task requires stacking blocks in a specific position marked in bright green which always locates at the middle of the picture, even if it is not stated in the instruction, so the output objects dict should contain 'green target'.

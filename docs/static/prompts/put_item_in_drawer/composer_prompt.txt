@@ -1,0 +1,14 @@
+# Query: grasp bottom_handle.
+movable = parse_query_obj('gripper')
+cost_map = get_cost_map('a point at the center of bottom_handle')
+gripper_map = get_gripper_map('open everywhere except 5cm around the bottom_handle')
+
+# Query: move away from the bottom_handle by 40cm and keep gripper close.
+movable = parse_query_obj('gripper')
+cost_map = get_cost_map('a point 40cm away from the bottom bottom_handle')
+gripper_map = get_gripper_map('close everywhere')
+
+# Query: grasp block.
+movable = parse_query_obj('gripper')
+cost_map = get_cost_map('a point in the center of the block 5cm down the z-axis')
+gripper_map = get_gripper_map('open everywhere except 5cm around the block')

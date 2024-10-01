@@ -1,0 +1,9 @@
+# Query: grasp chicken.
+movable = parse_query_obj('gripper')
+cost_map = get_cost_map('a point at the center of chicken')
+gripper_map = get_gripper_map('open everywhere except 3cm around the chicken')
+
+# Query: move to grill then open gripper
+movable = parse_query_obj('gripper')
+cost_map = get_cost_map('a point at the center of grill')
+gripper_map = get_gripper_map('close everywhere except 3cm around the grill')

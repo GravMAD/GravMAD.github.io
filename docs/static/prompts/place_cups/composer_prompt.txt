@@ -1,0 +1,14 @@
+# Query: grasp cup1.
+movable = parse_query_obj('gripper')
+cost_map = get_cost_map('a point at the center of cup1')
+gripper_map = get_gripper_map('open everywhere except 3cm around the cup1')
+
+# Query: grasp cup1 by the handle.
+movable = parse_query_obj('gripper')
+cost_map = get_cost_map('a point at the center of cup1')
+gripper_map = get_gripper_map('open everywhere except 3cm around the cup1')
+
+# Query: move to cup_holder_spoke0 and keep gripper close.
+movable = parse_query_obj('gripper')
+cost_map = get_cost_map('a point at the center of cup_holder_spoke0')
+gripper_map = get_gripper_map('close everywhere')

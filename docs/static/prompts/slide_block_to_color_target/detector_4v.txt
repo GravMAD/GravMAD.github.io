@@ -1,0 +1,17 @@
+Instruction: cover the green target with the block by pushing the block in its direction.
+(example_som)
+<Start Analyzing>
+The desktop has a block, 4 colored target and some numbers associated with it.
+- block label as 16.
+- blue target label as 11.
+- green target label as 10.
+- yellow target label as 8.
+- pink target label as 9.
+In this task, I need to cover the green target with the block by pushing the block in its direction..
+The block is labeled as label 16 and green target label as 10.
+All other objects, including blue target, pink target, yellow target, parts of the robotic arm, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "block": 16,
+    "green_target": 10
+}

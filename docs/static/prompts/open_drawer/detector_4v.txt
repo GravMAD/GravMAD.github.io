@@ -1,0 +1,16 @@
+Instruction: grip the bottom handle and pull the bottom drawer open.
+(example_som)
+<Start Analyzing>
+The desktop has a drawer and some numbers associated with it.
+- Drawer bottom handle label as 8.
+- Drawer middle handle label as 9.
+- Drawer top handle label as 7.
+In this task, I need to grip the bottom handle and pull the bottom drawer open.
+The bottom handle is labeled as label 8. The middle handle is labeled as label 9. The top handle is labeled as label 7.
+All other objects, including parts of the robotic arm, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "bottom_handle": 8,
+    "middle_handle": 9,
+    "top_handle": 7
+}

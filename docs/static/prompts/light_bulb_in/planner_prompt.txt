@@ -1,0 +1,5 @@
+objects = ['lamp_screw', 'blue_stand_bulb']
+# Query: pick up the light bulb from the blue stand, lift it up to just above the lamp, then screw it down into the lamp in a clockwise fashion.
+composer("grasp blue_stand_bulb")
+composer("move to 10cm on the top of lamp_screw and keep gripper close")
+# done

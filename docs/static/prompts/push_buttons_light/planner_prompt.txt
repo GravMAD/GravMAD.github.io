@@ -1,0 +1,4 @@
+objects = ['yellow_button', 'yellow_light']
+# Query: push the button with the same color as the light.
+composer("push yellow_button")
+# done

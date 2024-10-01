@@ -1,0 +1,5 @@
+objects = ['steak', 'grill']
+# Query: pick up the steak and place it on the grill.
+composer("grasp steak")
+composer("move to grill then open gripper")
+# done

@@ -1,0 +1,18 @@
+Instruction: set 2 red cubes on top of each other. 
+(example_som)
+<Start Analyzing>
+The desktop has various colored cubes and some numbers associated with them.
+- Blue Cubes: Numbered 10, 12, and 13.
+- Red Cubes: Numbered 14, 15, 16, and 17.
+- Green Target: Numbered 11.
+In this task, I need to set 2 red cubes on top of each other on the green target.
+The red cubes are labeled as label 14, 15, 16, 17, and the green target as label 11.
+All other objects, including the blue cubes, parts of the robotic arm, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "red_cube1": 14,
+    "red_cube2": 15,
+    "red_cube3": 16,
+    "red_cube4": 17,
+    "green_target": 11
+}

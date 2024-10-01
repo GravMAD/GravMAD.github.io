@@ -1,0 +1,11 @@
+objects = ['red_jar', 'lid']
+# Query: grasping the lid, lift it from the table and use it to seal the red jar.
+composer("grasp lid")
+composer("move to 5cm top of red_jar and keep gripper close")
+# done
+
+objects = ['green_jar', 'lid']
+# Query: screw on the green jar lid.
+composer("grasp lid")
+composer("move to 5cm top of green_jar and keep gripper close")
+# done

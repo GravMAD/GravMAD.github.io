@@ -1,0 +1,11 @@
+objects = ['jar_closer_to_banana', 'lid']
+# Query: grasping the lid, lift it from the table and use it to seal the jar closer to the banana.
+composer("grasp lid")
+composer("move to 5cm top of jar_closer_to_banana then open gripper")
+# done
+
+objects = ['jar_closer_to_banana', 'lid']
+# Query: screw on the jar lid that is closest to the banana.
+composer("grasp lid")
+composer("move to 5cm top of jar_closer_to_banana then open gripper")
+# done

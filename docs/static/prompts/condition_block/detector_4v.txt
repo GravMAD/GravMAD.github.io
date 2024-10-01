@@ -1,0 +1,19 @@
+Instruction: if blue block exists, stack 1 pink blocks, then add this blue block.
+(example_som)
+<Start Analyzing>
+The desktop has various colored cubes and some numbers associated with them.
+- Blue Cube: Numbered 10.
+- Pink Cubes: Numbered 11, 14 and 15.
+- Grey Cubes: Numbered 12, 13, 16, and 17.
+- Green Target: Numbered 9.
+In this task, I need to stack 1 pink blocks, then add this blue block if blue block exists.
+The pink cubes are labeled as label 11, 14, 15, the blue cube labeled as 10 and the green target as label 9.
+All other objects, including the blue cubes, parts of the robotic arm, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "pink_cube1": 11,
+    "pink_cube2": 14,
+    "pink_cube3": 15,
+    "blue_cube": 10,
+    "green_target": 9
+}

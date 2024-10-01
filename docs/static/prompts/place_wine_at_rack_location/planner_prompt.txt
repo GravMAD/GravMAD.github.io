@@ -1,0 +1,11 @@
+objects = ['wine_bottle', 'shelf']
+# Query: leave the wine on the left section of the shelf.
+composer("grasp wine_bottle")
+composer("move to shelf_left then open gripper") # position of shelf_left can be inferred from shelf
+# done
+
+objects = ['wine_bottle', 'shelf']
+# Query: slide the bottle onto the left part of the rack.
+composer("grasp wine_bottle")
+composer("move to shelf_left then open gripper") # position of shelf_left can be inferred from shelf
+# done

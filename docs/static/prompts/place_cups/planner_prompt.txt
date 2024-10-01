@@ -1,0 +1,25 @@
+objects = ['cup_holder_spoke0', 'cup_holder_spoke1', 'cup0', 'cup1', 'cup2']
+# Query: move 3 mugs from the table to the cup holder.
+composer("grasp cup0")
+composer("move to cup_holder_spoke0 and keep gripper close") # keep close to avoid sliding
+composer("grasp cup1")
+composer("move to cup_holder_spoke1 and keep gripper close")
+composer("grasp cup2")
+composer("move to cup_holder_spoke0 and keep gripper close")
+# done
+
+objects = ['cup_holder_spoke0', 'cup_holder_spoke1', 'cup0', 'cup1', 'cup2']
+# Query: pick up one cup and put it on the mug tree.
+composer("grasp cup0")
+composer("move to cup_holder_spoke0 and keep gripper close") # keep close to avoid sliding
+# done
+
+objects = ['cup_holder_spoke0', 'cup_holder_spoke1', 'cup_holder_spoke2', 'cup0', 'cup1', 'cup2']
+# Query: pick up 3 mugs and slide their handles onto the cup holder spokes.
+composer("grasp cup0")
+composer("move to cup_holder_spoke0 and keep gripper close") # keep close to avoid sliding
+composer("grasp cup1")
+composer("move to cup_holder_spoke1 and keep gripper close")
+composer("grasp cup2")
+composer("move to cup_holder_spoke2 and keep gripper close")
+# done

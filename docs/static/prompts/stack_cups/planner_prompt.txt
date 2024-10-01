@@ -1,0 +1,7 @@
+objects = ['black_cup', 'green_cup', 'blue_cup']
+# Query: stack the other cups on top of the black cup.
+composer("grasp green_cup")
+composer("move to 5cm on top of black_cup then open gripper")
+composer("grasp blue_cup")
+composer("move to 10cm on top of black_cup then open gripper")
+# done

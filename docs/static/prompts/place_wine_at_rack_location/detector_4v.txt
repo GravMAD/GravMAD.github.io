@@ -1,0 +1,16 @@
+Instruction: leave the wine on the left section of the shelf.
+(example_som)
+<Start Analyzing>
+The desktop has a wine, a shelf and some numbers associated with it.
+- Wine bottle label as 15.
+- Shelf_left label as 11.
+- Shelf_middle label as 8.
+- Shelf_right label as 10.
+In this task, I need to leave the wine on the left section of the shelf.
+The wine bottle is labeled as label 15, and Shelf_left as label 11.
+All other objects, including desktop, parts of the robotic arm, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "wine_bottle": 15,
+    "Shelf_left": 11
+}

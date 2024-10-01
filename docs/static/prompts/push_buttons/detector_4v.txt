@@ -1,0 +1,16 @@
+Instruction: push the red button, then push the purple button, then push the green button.
+(example_som)
+<Start Analyzing>
+The desktop has three buttons and some numbers associated with it.
+- red button label as 8.
+- purple button label as 10.
+- green button label as 9.
+In this task, I need to push the red button, then push the purple button, then push the green button.
+The red button is labeled as label 8, purple button as label 10, and green button as label 9.
+All other objects, including parts of the robotic arm, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "red_button": 8,
+    "purple_button": 10,
+    "green_button": 9
+}

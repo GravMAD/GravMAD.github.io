@@ -1,0 +1,17 @@
+Instruction: screw on the red jar lid. 
+(example_som)
+<Start Analyzing>
+The desktop has various colored jars, a jar lid and some numbers associated with them.
+- A red cylindrical jar labeled as 11.
+- A green cylindrical jar labeled as 9.
+- A small grey lid labeled as 14.
+- A purple block labeled as 13.
+- A blue button labeled as 12.
+In this task, I need to screw the grey lid onto the red jar.
+The red jar is labeled as label 11, and lid as label 14.
+All other objects, including the green jar, purple block, blue button, parts of the robotic arm, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "red_jar": 11,
+    "lid": 14
+}
