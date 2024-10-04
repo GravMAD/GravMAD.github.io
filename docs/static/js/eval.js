@@ -104,10 +104,9 @@ function updateSingleVideo() {
     // Base path for the single-task video
     const basePath = './static/video/base_gravmad/';
 
-    // Update the video source for the single-task video
+    // Update the video source directly
     const videoElement = document.getElementById('multi-task-result-video');
-    const sourceElement = videoElement.querySelector('source');
-    sourceElement.src = `${basePath}${taskValue}_demo_${instanceValue}.mp4`;
+    videoElement.src = `${basePath}${taskValue}_demo_${instanceValue}.mp4`;
     videoElement.load(); // Reload video with new source
 
     // Update the title based on the selected task and instance
