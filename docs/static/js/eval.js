@@ -56,10 +56,10 @@ function updateOverallVideo() {
 
     // Base paths for each category of video
     const basePaths = {
-        'voxposer': './static/video/voxposer/',
-        'act3d': './static/video/act3d/',
-        '3dda': './static/video/3dda/',
-        'gravmad': './static/video/gravmad/',
+        'voxposer': 'static/video/voxposer/',
+        'act3d': 'static/video/act3d/',
+        '3dda': 'static/video/3dda/',
+        'gravmad': 'static/video/gravmad/',
     };
 
     // Update each video source according to its base path
@@ -102,7 +102,7 @@ function updateSingleVideo() {
     const instanceValue = document.getElementById('single-menu-instances').value;
 
     // Base path for the single-task video
-    const basePath = './static/video/base_gravmad/';
+    const basePath = 'static/video/base_gravmad/';
 
     // Update the video source directly
     const videoElement = document.getElementById('multi-task-result-video');

@@ -10,10 +10,10 @@ function updateInteractive() {
     };
 
     const iframeSources = {
-        "close-jar-banana": ["./static/valuemap/close_jar_banana_map1.html", "./static/valuemap/close_jar_banana_map2.html"],
-        "open-drawer-small": ["./static/valuemap/open_drawer_small_map1.html", "./static/valuemap/open_drawer_small_map2.html"],
-        "meat-on-grill": ["./static/valuemap/meat_on_grill_map1.html", "./static/valuemap/meat_on_grill_map2.html"],
-        "push-buttons-light": ["./static/valuemap/push_buttons_light_map1.html"]
+        "close-jar-banana": ["static/valuemap/close_jar_banana_map1.html", "static/valuemap/close_jar_banana_map2.html"],
+        "open-drawer-small": ["static/valuemap/open_drawer_small_map1.html", "static/valuemap/open_drawer_small_map2.html"],
+        "meat-on-grill": ["static/valuemap/meat_on_grill_map1.html", "static/valuemap/meat_on_grill_map2.html"],
+        "push-buttons-light": ["static/valuemap/push_buttons_light_map1.html"]
     };
 
     const videoElement = document.getElementById('interactive-video');
