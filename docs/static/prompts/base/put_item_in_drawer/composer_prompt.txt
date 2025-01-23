@@ -1,0 +1,11 @@
+# Query: grasp bottom_handle.
+sub_goal_pos = get_cost_map('a point at the center of bottom_handle')()
+init_openness, sub_goal_openness = get_gripper_map('open everywhere except 5cm around the bottom_handle')()
+
+# Query: move away from the bottom_handle by 40cm and keep gripper close.
+sub_goal_pos = get_cost_map('a point 40cm away from the bottom bottom_handle')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere')()
+
+# Query: grasp block.
+sub_goal_pos = get_cost_map('a point in the center of the block 5cm down the z-axis')()
+init_openness, sub_goal_openness = get_gripper_map('open everywhere except 5cm around the block')()

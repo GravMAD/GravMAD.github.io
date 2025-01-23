@@ -1,0 +1,7 @@
+# Query: grasp lid.
+sub_goal_pos = get_cost_map(f'a point at the center of lid')()
+init_openness, sub_goal_openness = get_gripper_map('open everywhere except 3cm around the lid')()
+
+# Query: move to 5cm top of red_jar and keep gripper close.
+sub_goal_pos = get_cost_map('a point at 5cm top of red_jar')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere')()

@@ -1,0 +1,11 @@
+# Query: grasp wine_bottle.
+sub_goal_pos = get_cost_map('a point at the center of wine_bottle')()
+init_openness, sub_goal_openness = get_gripper_map('open everywhere except 3cm around the wine_bottle')()
+
+# Query: move to shelf_left then open gripper.
+sub_goal_pos = get_cost_map('a point at the center of shelf_left')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere except 3cm around the shelf_left')()
+
+# Query: push the bottle to the left part of the shelf.
+sub_goal_pos = get_cost_map('a point at the center of shelf_left')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere except 3cm around the shelf_left')()

@@ -1,0 +1,51 @@
+import numpy as np
+from env_utils import reset_to_default_pose
+from perception_utils import parse_query_obj
+from plan_utils import get_cost_map, get_gripper_map
+
+# Query: move ee forward for 10cm then open gripper.
+sub_goal_pos = get_cost_map(f'a point 10cm in front of {movable.position}')()
+init_openness, sub_goal_openness = get_gripper_map(f'close everywhere except 3cm around a point 10cm in front of {movable.position}')()
+
+# Query: drop the toy inside container.
+sub_goal_pos = get_cost_map('a point 15cm above the container')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere but open when on top of the container')()
+
+# Query: push close the topmost drawer.
+sub_goal_pos = get_cost_map('a point 30cm into the topmost drawer handle')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere')()
+
+# Query: push the second to the left block along the red line.
+sub_goal_pos = get_cost_map('the red line')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere')()
+
+# Query: grasp the blue block from the table.
+sub_goal_pos = get_cost_map('a point at the center of blue block')()
+init_openness, sub_goal_openness = get_gripper_map('open everywhere except 1cm around the blue block')()
+
+# Query: move to the left of the brown block.
+sub_goal_pos = get_cost_map('a point 10cm to the left of the brown block')()
+init_openness, sub_goal_openness = get_gripper_map('open everywhere')()
+
+# Query: move to the top of the tray that contains the lemon.
+sub_goal_pos = get_cost_map('a point 10cm above the tray that contains the lemon')()
+init_openness, sub_goal_openness = get_gripper_map('open everywhere')()
+
+# Query: close drawer by 5cm.
+sub_goal_pos = get_cost_map('a point 5cm into the drawer handle')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere')()
+
+# Query: move to 5cm on top of the soda can then open gripper.
+sub_goal_pos = get_cost_map('a point 5cm above the soda can')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere except 3cm around the 5cm on top of the soda')()
+
+# Query: wipe the red dot.
+sub_goal_pos = get_cost_map('the red dot')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere')()
+
+# Query: grasp the mug from the shelf.
+sub_goal_pos = get_cost_map('a point at the center of the mug handle')()
+init_openness, sub_goal_openness = get_gripper_map('open everywhere except 3cm around the mug handle')()
+
+# Query: open gripper.
+init_openness, sub_goal_openness = get_gripper_map('open everywhere')()

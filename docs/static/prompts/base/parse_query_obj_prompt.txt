@@ -1,0 +1,91 @@
+import numpy as np
+from perception_utils import detect
+
+objects = ['green block', 'cardboard box']
+# Query: gripper.
+gripper = detect('gripper')
+ret_val = gripper
+
+objects = ['vase', 'napkin box', 'mask']
+# Query: table.
+table = detect('table')
+ret_val = table
+
+objects = ['brown line', 'red block', 'monitor']
+# Query: brown line.
+brown_line = detect('brown line')
+ret_val = brown_line
+
+objects = ['green block', 'cup holder', 'black block']
+# Query: any block.
+block = detect('green block')
+ret_val = block
+
+objects = ['mouse', 'yellow bowl', 'brown bowl', 'sticker']
+# Query: bowl closest to the sticker.
+yellow_bowl = detect('yellow bowl')
+brown_bowl = detect('brown bowl')
+sticker = detect('sticker')
+if np.linalg.norm(yellow_bowl.position - sticker.position) < np.linalg.norm(brown_bowl.position - sticker.position):
+    closest_bowl = yellow_bowl
+else:
+    closest_bowl = brown_bowl
+ret_val = closest_bowl
+
+objects = ['grape', 'wood tray', 'strawberry', 'white tray', 'blue tray', 'bread']
+# Query: tray that contains the bread.
+wood_tray = detect('wood tray')
+white_tray = detect('white tray')
+bread = detect('bread')
+if np.linalg.norm(wood_tray.position - bread.position) < np.linalg.norm(white_tray.position - bread.position):
+    tray_with_bread = wood_tray
+else:
+    tray_with_bread = white_tray
+ret_val = tray_with_bread
+
+objects = ['glass', 'vase', 'plastic bottle', 'block', 'phone case']
+# Query: anything fragile.
+fragile_items = []
+for obj in ['glass', 'vase']:
+    item = detect(obj)
+    fragile_items.append(item)
+ret_val = fragile_items
+
+objects = ['blue_block', 'red_block']
+# Query: red block.
+red_block = detect('red_block')
+ret_val = red_block
+
+objects = ['wine_bottle', 'shelf_middle']
+# Query: shelf_middle.
+shelf_middle = detect('shelf_middle')
+shelf_middle.position[1] = shelf_middle.position[1] - cm2index(15, 'y') # This is always needed when it comes to shelf-like objects.
+ret_val = shelf_middle
+
+objects = ['lid', 'blue_jar']
+# Query: blue_jar.
+blue_jar = detect('blue_jar')
+blue_jar.position[0] = blue_jar.position[0] - cm2index(5, 'x') # always needed when it comes to jar-like objects.
+ret_val = blue_jar
+
+objects = ['lid', 'jar_closer_to_banana']
+# Query: jar_closer_to_banana.
+jar_closer_to_banana = detect('jar_closer_to_banana')
+jar_closer_to_banana.position[0] = jar_closer_to_banana.position[0] - cm2index(5, 'x') # always needed when it comes to jar-like objects.
+ret_val = jar_closer_to_banana
+
+objects = ['bottom_handle', 'middle_handle', 'top_handle']
+# Query: bottom_handle.
+bottom_handle = detect('bottom_handle')
+middle_handle = detect('middle_handle')
+top_handle = detect('top_handle')
+# average the positions of the handles x axis for high precision.
+bottom_handle.position[0] = int((bottom_handle.position[0] + middle_handle.position[0] + top_handle.position[0])/3) # This is always needed when it comes to handle-like objects.
+bottom_handle.position[1] = bottom_handle.position[1] - cm2index(15, 'y') # Decrease by 15 on the y-axis for higher precision
+bottom_handle.position[2] = middle_handle.position[2] - cm2index(12, 'z') # top_handle should be higher than the middle_handle. if query is 'middle_handle', this line should be removed.
+ret_val = bottom_handle
+
+objects = ['chicken', 'gray_shelf']
+# Query: chicken.
+chicken = detect('chicken')
+ret_val = chicken

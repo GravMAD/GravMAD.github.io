@@ -1,0 +1,7 @@
+# Query: grasp chicken.
+sub_goal_pos = get_cost_map('a point at the center of chicken')()
+init_openness, sub_goal_openness = get_gripper_map('open everywhere except 3cm around the chicken')()
+
+# Query: move to place_target then open gripper.
+sub_goal_pos = get_cost_map('a point at the center of place_target')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere except 3cm around the place_target')()

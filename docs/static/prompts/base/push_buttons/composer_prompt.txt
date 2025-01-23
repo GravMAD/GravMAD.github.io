@@ -1,0 +1,3 @@
+# Query: push red_button.
+sub_goal_pos = get_cost_map('a point at the center of red_button')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere')() # please always give me gripper_map

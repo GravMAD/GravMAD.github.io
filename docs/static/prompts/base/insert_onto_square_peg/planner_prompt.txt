@@ -1,0 +1,5 @@
+objects = ['red_spoke', 'ring']
+# Query: put the ring on the red spoke.
+composer("grasp ring")
+composer("move to 3cm on the top of red_spoke then open gripper")
+# done

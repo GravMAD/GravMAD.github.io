@@ -1,9 +1,0 @@
-# Query: grasp lid.
-movable = parse_query_obj('gripper')
-cost_map = get_cost_map(f'a point at the center of lid')
-gripper_map = get_gripper_map('open everywhere except 3cm around the lid')
-
-# Query: move to 5cm top of red_jar and keep gripper close.
-movable = parse_query_obj('gripper')
-cost_map = get_cost_map('a point at 5cm top of red_jar')
-gripper_map = get_gripper_map('close everywhere')

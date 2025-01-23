@@ -1,0 +1,45 @@
+# Query: open everywhere except 3cm around the green block.
+# open everywhere
+init_openness = 1
+# close when 1cm around the green block
+sub_goal_openness = 0
+openness = [init_openness, sub_goal_openness]
+ret_val = openness
+
+# Query: close everywhere but open when on top of the back left corner of the table.
+# close everywhere
+init_openness = 0
+# open when on top of the back left corner of the table
+sub_goal_openness = 1
+openness = [init_openness, sub_goal_openness]
+ret_val = openness
+
+# Query: always open except when you are on the right side of the table.
+# always open
+init_openness = 1
+# close when you are on the right side of the table
+sub_goal_openness = 0
+openness = [init_openness, sub_goal_openness]
+ret_val = openness
+
+# Query: always close except when you are on the back side of the table.
+# always close
+init_openness = 0
+# open when you are on the back side of the table
+sub_goal_openness = 1
+openness = [init_openness, sub_goal_openness]
+ret_val = openness
+
+# Query: open everywhere.
+# open everywhere
+init_openness = 1
+sub_goal_openness = 1
+openness = [init_openness, sub_goal_openness]
+ret_val = openness
+
+# Query: close everywhere.
+# close everywhere
+init_openness = 0
+sub_goal_openness = 0
+openness = [init_openness, sub_goal_openness]
+ret_val = openness

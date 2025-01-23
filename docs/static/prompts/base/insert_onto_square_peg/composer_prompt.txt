@@ -1,0 +1,7 @@
+# Query: grasp ring.
+sub_goal_pos = get_cost_map('a point at the center of ring')()
+init_openness, sub_goal_openness = get_gripper_map('open everywhere except 3cm around the ring')()
+
+# Query: move to 3cm on the top of red_spoke then open gripper.
+sub_goal_pos = get_cost_map('a point 3cm on the top of red_spoke')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere but open 3cm around the red_spoke')()

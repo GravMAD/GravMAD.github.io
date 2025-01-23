@@ -1,0 +1,7 @@
+# Query: grasp blue_stand_bulb.
+sub_goal_pos = get_cost_map('a point at the center of blue_stand_bulb')()
+init_openness, sub_goal_openness = get_gripper_map('open everywhere except 3cm around the blue_stand_bulb')()
+
+# Query: move to 10cm on the top of lamp_screw and keep gripper close.
+sub_goal_pos = get_cost_map('a point at 10cm on the top of lamp_screw')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere')()

@@ -1,0 +1,15 @@
+Instruction: pick up the light bulb from the pink stand, lift it up to just above the lamp, then screw it down into the lamp in a clockwise fashion.
+(example_som)
+<Start Analyzing>
+The desktop has bulbs with various colored stand, a lamp_screw and some numbers associated with them.
+- Light bulb on a pink stand labeled as 15.
+- Light bulb on a white stand labeled as 13.
+- A lamp_screw labeled as 17.
+In this task, I need to pick up the light bulb from the pink stand, lift it up to just above the lamp, then screw it down into the lamp in a clockwise fashion.
+The Light bulb on a pink stand is labeled as label 15, and lamp_screw as label 17.
+All other objects, including the light bulb on a white stand, parts of the robotic arm, and the background, are distractions.
+<End Analyzing>
+objects = {
+    "pink_stand_bulb": 15,
+    "lamp_screw": 17
+}

@@ -1,4 +1,0 @@
-# Query: push red_button.
-movable = parse_query_obj('gripper')
-cost_map = get_cost_map('a point at the center of red_button')
-gripper_map = get_gripper_map('close everywhere') # please always give me gripper_map

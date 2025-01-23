@@ -1,0 +1,11 @@
+# Query: grasp cup1.
+sub_goal_pos = get_cost_map('a point at the center of cup1')()
+init_openness, sub_goal_openness = get_gripper_map('open everywhere except 3cm around the cup1')()
+
+# Query: grasp cup1 by the handle.
+sub_goal_pos = get_cost_map('a point at the center of cup1')()
+init_openness, sub_goal_openness = get_gripper_map('open everywhere except 3cm around the cup1')()
+
+# Query: move to cup_holder_spoke0 and keep gripper close.
+sub_goal_pos = get_cost_map('a point at the center of cup_holder_spoke0')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere')()

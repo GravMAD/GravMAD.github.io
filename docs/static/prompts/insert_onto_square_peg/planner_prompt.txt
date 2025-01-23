@@ -1,5 +1,0 @@
-objects = ['red_spoke', 'ring']
-# Query: put the ring on the red spoke.
-composer("grasp ring")
-composer("move to red_spoke then open gripper")
-# done

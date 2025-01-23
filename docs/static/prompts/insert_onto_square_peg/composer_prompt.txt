@@ -1,9 +1,0 @@
-# Query: grasp ring.
-movable = parse_query_obj('gripper')
-cost_map = get_cost_map('a point at the center of ring')
-gripper_map = get_gripper_map('open everywhere except 3cm around the ring')
-
-# Query: move to red_spoke then open gripper.
-movable = parse_query_obj('gripper')
-cost_map = get_cost_map('a point at the center of red_spoke')
-gripper_map = get_gripper_map('close everywhere but open 3cm around the red_spoke')

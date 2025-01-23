@@ -1,0 +1,11 @@
+# Query: move to the side of the block with its back to the green_target.
+sub_goal_pos = get_cost_map('a point on the side of the block with its back to the green_target')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere')() # please always give me gripper_map
+
+# Query: push to green_target.
+sub_goal_pos = get_cost_map('a point at the center of green_target')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere')()
+
+# Query: push to pink_plane.
+sub_goal_pos = get_cost_map('a point at the center of pink_plane')()
+init_openness, sub_goal_openness = get_gripper_map('close everywhere')()
